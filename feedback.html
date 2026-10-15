@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Зворотній зв'язок — Kyiv alive</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header-fixed">
+        <h1>Новинний портал "Kyiv alive"</h1>
+        <p><a href="index.html">&larr; На Головну сторінку</a></p>
+    </header>
+
+    <main class="feedback-flex-container">
+        <h2>Форма зворотного зв'язку</h2>
+
+        <form action="#" method="post" class="feedback-form">
+            
+            <fieldset class="feedback-fieldset">
+                <legend>Персональна інформація</legend>
+                
+                <div class="form-group-flex">
+                    <label for="fullname">1. Прізвище та ім'я:</label>
+                    <input type="text" id="fullname" name="fullname" required placeholder="Іванов Іван">
+                </div>
+
+                <div class="form-group-flex">
+                    <label for="email">2. E-mail:</label>
+                    <input type="email" id="email" name="email" required placeholder="example@domain.com">
+                </div>
+
+                <div class="form-group-flex">
+                    <label for="age">3. Вік:</label>
+                    <input type="number" id="age" name="age" min="1" max="120" required placeholder="25">
+                </div>
+
+                <div class="form-group-flex">
+                    <label for="education">4. Освіта:</label>
+                    <select id="education" name="education" required>
+                        <option value="" disabled selected>Оберіть освіту</option>
+                        <option value="incomplete">Неповна</option>
+                        <option value="full">Повна</option>
+                        <option value="higher">Вища</option>
+                        <option value="professional">Професійна</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <div class="form-group-flex">
+                <label for="purpose">5. Мета зворотного зв'язку:</label>
+                <select id="purpose" name="purpose" required>
+                    <option value="cooperation">Співпраця</option>
+                    <option value="complaint">Скарга на порушення права власності</option>
+                    <option value="suggestion">Пропозиція</option>
+                    <option value="bug">Наявність помилки</option>
+                </select>
+            </div>
+
+            <div class="form-group-flex">
+                <label for="details">6. Детально:</label>
+                <textarea id="details" name="details" rows="5" maxlength="300" placeholder="Опишіть ваше звернення..."></textarea>
+            </div>
+
+            <div class="form-group-flex" style="flex-direction: row; align-items: center; gap: 10px;">
+                <input type="checkbox" id="consent" name="consent" required>
+                <label for="consent">8. Я даю згоду на обробку моїх персональних даних</label>
+            </div>
+
+            <!-- Блок кнопок з демонстрацією порядку (order) та розтягування flex-елементів -->
+            <div class="buttons-group-flex">
+                <button type="submit">Надіслати інформацію</button>
+                <button type="reset">Очистити форму</button>
+            </div>
+
+        </form>
+    </main>
+
+    <footer style="text-align: center; padding: 20px;">
+        <p>&copy; 2026 Новинний портал "Kyiv alive"</p>
+    </footer>
+
+</body>
+</html>
